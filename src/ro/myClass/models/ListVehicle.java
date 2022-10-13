@@ -24,7 +24,5 @@ public class ListVehicle {
         return vehicles;
 
     }
-    public void setPret(){
 
-    }
 }

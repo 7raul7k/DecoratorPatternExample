@@ -1,14 +1,23 @@
 package ro.myClass.models;
 
-public class Car extends Vehicle{
+public class Car extends VehicleDecorator{
+    private Vehicle vehicle;
 
     private String model;
     private int an;
 
     public Car(int id,String owner ,String color,int price,String model,int an){
-        super("car", id, owner, color, price);
+        super.setId(id);
+        super.setOwner(owner);
+        super.setColor(color);
+        super.setPrice(price);
         this.model = model;
         this.an = an;
+
+    }
+    @Override
+    public void getDescription() {
+        this.afisare();
 
     }
 
@@ -21,7 +30,18 @@ public class Car extends Vehicle{
         System.out.println("Price: " + super.getPrice());
         System.out.println("Model: " + model);
         System.out.println("Year: " + an);
+        System.out.println("\n==================================\n");
 
+    }
+    public void setPrice(){
+        int price = this.getPrice();
+        if(vehicle.getSize() == Size.BIG){
+            this.setPrice(price+400);
+        }else if(vehicle.getSize() == Size.MEDIUM){
+            this.setPrice(price+200);
+        }else if(vehicle.getSize() == Size.SMALL){
+            this.setPrice(price+100);
+        }
     }
 
     @Override
@@ -38,10 +58,7 @@ public class Car extends Vehicle{
 
     }
 
-    @Override
-    public void setPret() {
-        super.setPret();
 
-    }
+
 
 }

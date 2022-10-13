@@ -1,32 +1,25 @@
 package ro.myClass.models;
 
 public abstract class Vehicle {
+
+    public enum Size{BIG,SMALL,MEDIUM};
+    Size size = Size.BIG;
     private int id;
-    private String type;
     private String owner;
     private String color;
     private int price;
-    public Vehicle(String type,int id,String owner ,String color,int price){
-        this.type = type;
-        this.id = id;
-        this.owner = owner;
-        this.color = color;
-        this.price = price;
-    }
+    private String type;
     public abstract void afisare();
     public abstract Vehicle duplicare();
-    public  void setPret(){
-        int calcularePret = 0 ;
-        if(hasCar()){
-            this.price = 4000;
-        }
-        if(hasBike()){
-            this.price = 1300;
-        }
-        if(hasAirplane()){
-            this.price = 8000;
-        }
 
+    public  void setSize(){
+        if(hasAirplane()){
+            this.price = price +100;
+        }else if(hasBike()){
+            this.price=price+50;
+        }else if(hasAirplane()){
+            this.price = price+300;
+        }
     }
     public boolean hasCar(){
         if(this.type.equals("car")){
@@ -47,6 +40,13 @@ public abstract class Vehicle {
         return false;
     }
 
+    public Size getSize() {
+        return size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
+    }
 
     public int getId() {
         return id;

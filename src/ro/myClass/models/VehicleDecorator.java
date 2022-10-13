@@ -1,2 +1,5 @@
-package ro.myClass.models;public class VehicleDecorator {
+package ro.myClass.models;
+
+public abstract class VehicleDecorator extends Vehicle {
+    public abstract void getDescription();
 }
