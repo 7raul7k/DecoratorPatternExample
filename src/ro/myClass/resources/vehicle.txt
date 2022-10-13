@@ -1,0 +1,3 @@
+car,1,Alexandru Popescu,rosu,4500,Audi,2008
+airplane,2,Marian Popovici,albastru,2500,5
+bike,3,Darius Andrei,galben,4500,bmx
