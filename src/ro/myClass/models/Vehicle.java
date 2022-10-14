@@ -9,8 +9,12 @@ public abstract class Vehicle {
     private String color;
     private int price;
     private String type;
-    public abstract void afisare();
-    public abstract Vehicle duplicare();
+    public void afisare(){
+        System.out.println("Im a vehicle");
+    };
+    public  Vehicle duplicare(){
+        return this;
+    }
 
     public  void setSize(){
         if(hasAirplane()){

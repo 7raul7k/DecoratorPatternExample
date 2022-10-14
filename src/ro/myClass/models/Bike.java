@@ -1,6 +1,6 @@
 package ro.myClass.models;
 
-public class Bike extends VehicleDecorator{
+public class Bike extends Vehicle{
     private String tipBicicleta;
     private Vehicle vehicle;
 
@@ -54,8 +54,5 @@ public class Bike extends VehicleDecorator{
         this.tipBicicleta = tipBicicleta;
     }
 
-    @Override
-    public void getDescription() {
-        this.afisare();
-    }
+
 }

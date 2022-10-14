@@ -1,6 +1,6 @@
 package ro.myClass.models;
 
-public class Airplane extends VehicleDecorator{
+public class Airplane extends Vehicle{
 
     private int numberofEngine;
     private Vehicle vehicle;
@@ -54,8 +54,5 @@ public class Airplane extends VehicleDecorator{
         this.numberofEngine = numberofEngine;
     }
 
-    @Override
-    public void getDescription() {
-        this.afisare();
-    }
+
 }

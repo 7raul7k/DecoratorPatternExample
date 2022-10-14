@@ -1,6 +1,6 @@
 package ro.myClass.models;
 
-public class Car extends VehicleDecorator{
+public class Car extends Vehicle{
     private Vehicle vehicle;
 
     private String model;
@@ -13,11 +13,6 @@ public class Car extends VehicleDecorator{
         super.setPrice(price);
         this.model = model;
         this.an = an;
-
-    }
-    @Override
-    public void getDescription() {
-        this.afisare();
 
     }
 
