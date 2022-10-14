@@ -2,6 +2,10 @@ package ro.myClass.models;
 
 public class FuelSystem extends PartsDecorator {
     private Vehicle vehicle;
+
+    public FuelSystem(Vehicle vehicle){
+        this.vehicle = vehicle;
+    }
     @Override
     public void getDescription() {
         vehicle.afisare();System.out.print("new Fuel System");
